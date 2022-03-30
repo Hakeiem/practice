@@ -12,4 +12,9 @@ class PostController extends Controller
         return view('post.index', ['posts'=>$posts]);
         //return 'hello';
     }
+
+    public function show($id) {
+        $post = Post::find($id);
+        return view('post.showPost', ['post'=>$post]);
+    }
 }
