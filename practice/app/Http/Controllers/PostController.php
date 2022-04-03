@@ -42,6 +42,9 @@ class PostController extends Controller
     }
 
     public function destory($id) {
-        // TO DO
+        $post = Post::findOrfail($id);
+        $post->delete();
+        $request->session()->flash('flash_message', 'Post successfully deleted!');
+        return redirect('post.index');
     }
 }

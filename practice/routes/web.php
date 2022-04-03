@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PhoneController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +21,8 @@ Route::get('/', function () {
 });
 
 Route::resource('/posts', PostController::class);
-Route::delete('delete-post/{id}', [PostController::class, 'destory']);
+Route::resource('/users', UserController::class);
+Route::resource('/users/phone', PhoneController::class);
+//Route::post('/users/phoneAssign', [PhoneController::class, 'create']);
+
+//Route::DELETE('delete-post/{id}', [PostController::class, 'destory']);
