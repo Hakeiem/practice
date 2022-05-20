@@ -11,7 +11,7 @@
         <input type="text" name="name" placeholder="Post Name">
         <input type="text" name="body" placeholder="Type...">
 
-        <input type="submit" name="submit">
+        <input type="submit" name="submitt">
     </form>
 </body>
 </html>
